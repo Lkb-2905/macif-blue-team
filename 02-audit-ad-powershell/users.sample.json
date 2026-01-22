@@ -1,0 +1,5 @@
+[
+  {"Name": "Alice Martin", "SamAccountName": "amartin", "LastLogonDate": "2025-08-01"},
+  {"Name": "Bob Leroy", "SamAccountName": "bleroy", "LastLogonDate": "2026-01-10"},
+  {"Name": "Carla Noel", "SamAccountName": "cnoel", "LastLogonDate": "2025-05-12"}
+]

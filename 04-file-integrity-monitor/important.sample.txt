@@ -1,0 +1,2 @@
+Fichier de reference pour le FIM.
+Modifier ce fichier pour tester les alertes.
