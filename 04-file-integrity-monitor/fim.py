@@ -12,11 +12,13 @@ def file_hash(path: str) -> str:
     return sha.hexdigest()
 
 
-def scan_folder(folder: str) -> dict:
+def scan_folder(folder: str, exclude: set[str]) -> dict:
     hashes = {}
     for root, _, files in os.walk(folder):
         for name in files:
-            path = os.path.join(root, name)
+            path = os.path.abspath(os.path.join(root, name))
+            if path in exclude:
+                continue
             hashes[path] = file_hash(path)
     return hashes
 
@@ -27,7 +29,8 @@ def main() -> None:
     parser.add_argument("--baseline", default="baseline.json")
     args = parser.parse_args()
 
-    current = scan_folder(args.folder)
+    exclude = {os.path.abspath(args.baseline)}
+    current = scan_folder(args.folder, exclude)
     if not os.path.exists(args.baseline):
         with open(args.baseline, "w", encoding="utf-8") as handle:
             handle.write(json.dumps(current, ensure_ascii=True, indent=2))
