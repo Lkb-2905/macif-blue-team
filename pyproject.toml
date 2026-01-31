@@ -1,0 +1,13 @@
+[project]
+name = "macif-blue-team"
+version = "0.1.0"
+description = "Outils Blue Team simples pour demos et formation."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

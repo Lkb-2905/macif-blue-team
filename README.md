@@ -1,5 +1,9 @@
 # MACIF - Blue Team (demo portfolio)
 
+![Tests](https://github.com/Lkb-2905/macif-blue-team/actions/workflows/tests.yml/badge.svg)
+![License](https://img.shields.io/badge/License-MIT-yellow.svg)
+![Python](https://img.shields.io/badge/Python-3.10%2B-blue)
+
 Objectif: proposer des outils Blue Team simples a demontrer.
 
 ## Contenu
@@ -26,6 +30,13 @@ python fim.py --folder . --baseline baseline.json
 
 cd ../05-generateur-mdp-anssi
 python password_gen.py --length 16
+```
+
+## Installation rapide
+```
+python -m venv .venv
+source .venv/bin/activate  # ou .venv\\Scripts\\activate sous Windows
+pip install -r requirements.txt
 ```
 
 ## Captures conseillees
